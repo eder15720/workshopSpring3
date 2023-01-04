@@ -49,6 +49,26 @@ public class OrderItem implements Serializable {
 		id.setProduct(product);
 	}
 
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	
+	public Double getSubTotal() {
+		return price * quantity;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
